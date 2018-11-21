@@ -25,7 +25,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='dir2html',  # Required
-    version='0.1.0',  # Required
+    version='0.2.0',  # Required
     description='Generate an html album from a given directory',  # Optional
     long_description=long_description,  # Optional
     long_description_content_type='text/markdown',  # Optional (see note above)
