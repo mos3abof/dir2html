@@ -25,7 +25,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='dir2html',  # Required
-    version='0.2.0',  # Required
+    version='0.2.2',  # Required
     description='Generate an html album from a given directory',  # Optional
     long_description=long_description,  # Optional
     long_description_content_type='text/markdown',  # Optional (see note above)
@@ -95,7 +95,11 @@ setup(
     # If using Python 2.6 or earlier, then these have to be included in
     # MANIFEST.in as well.
     package_data={  # Optional
-        '': ['*.html'],
+        '': [
+            'resources/*.html',
+            'resources/assets/*.css',
+            'resources/assets/*.js',
+            ],
     },
 
     # Although 'package_data' is the preferred approach, in some case you may

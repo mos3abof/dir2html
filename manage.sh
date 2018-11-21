@@ -17,8 +17,9 @@ elif [ ${INPUT} == "run" ]; then
      ./venv/bin/python3 -m dir2html "${@:2}"
 elif [ ${INPUT} == "upload" ]; then
     ./venv/bin/twine upload dist/*
+elif [ ${INPUT} == "clean" ]; then
+    rm -rf ./dist ./dir2html.egg-info ./build
 else
     usage
     exit 1
 fi
-
