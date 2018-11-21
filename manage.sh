@@ -12,7 +12,9 @@ if [ -z ${INPUT} ]; then
 fi
 
 if [ ${INPUT} == "dist" ]; then
-    ./venv/bin/python3 setup.py sdist
+    ./venv/bin/python3 setup.py sdist && ./venv/bin/python3 setup.py install
+elif [ ${INPUT} == "run" ]; then
+     ./venv/bin/python3 -m dir2html "${@:2}"
 elif [ ${INPUT} == "upload" ]; then
     ./venv/bin/twine upload dist/*
 else
